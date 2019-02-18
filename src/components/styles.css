@@ -1,0 +1,17 @@
+body, html {margin: 0; padding: 0}
+
+img{
+  height:60px;
+}
+
+.articles{
+  margin-top: 60px;
+  float:left;
+  width:70%;
+}
+
+.official-playlist{
+  margin-top: 60px;
+  float:right;
+  width:30%;
+}
