@@ -20,6 +20,7 @@ class App extends Component {
     artists: []
   }
 }
+// test change
 
   componentDidMount(){
     const artists = firebaseDB.collection('artists')
