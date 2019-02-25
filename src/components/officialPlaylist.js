@@ -10,4 +10,4 @@ class OfficialPlaylist extends Component {
   }
 }
 
-export default OfficialPlaylist;
+export default OfficialPlaylist

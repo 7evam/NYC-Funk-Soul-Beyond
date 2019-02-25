@@ -10,4 +10,4 @@ class Articles extends Component {
   }
 }
 
-export default Articles;
+export default Articles
