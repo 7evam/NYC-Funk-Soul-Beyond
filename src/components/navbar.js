@@ -8,6 +8,8 @@ import { withStyles } from '@material-ui/core/styles';
 import './styles.css';
 import Artists from './Artists.js'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
+import Venues from './Venues.js'
+import Releases from './Releases'
 
 
 const styles = {
@@ -35,13 +37,13 @@ class Navbar extends Component {
               <Link to='/artists'><Tab className="item" label="Artists" /></Link>
             </div>
             <div>
-              <Tab label="Recent Releases" />
+              <Link to='/releases'><Tab label="Recent Releases" /></Link>
             </div>
             <div>
-              <Tab label="Upcoming Shows" />
+              <Link to='/shows'><Tab label="Shows" /></Link>
             </div>
             <div>
-              <Tab label="Venues" />
+              <Link to='/venues'><Tab label="Venues" /></Link>
             </div>
           </Tabs>
         </AppBar>

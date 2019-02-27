@@ -15,6 +15,9 @@ import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
 import Layout from './Layout.js'
 import HomePage from './HomePage.js'
 import NotFound from './NotFound.js'
+import Venues from './Venues.js'
+import Releases from './Releases.js'
+import Shows from './Shows.js'
 
 class App extends Component {
 
@@ -50,7 +53,15 @@ class App extends Component {
       <Switch>
       <Route exact path='/' component={HomePage}/>
       <Route exact path='/artists' component={Artists}/>
+      <Route exact path='/releases' component={Releases}/>
+      <Route exact path='/shows' component={Shows}/>
+      <Route exact path='/venues' component={Venues}/>
+
       <Route path ='/artists/:id' component={(props)=> <Artist {...props} name={name} />}/>
+      <Route path ='/releases/:id' component={(props)=> <Artist {...props} name={name} />}/>
+      <Route path ='/shows/:id' component={(props)=> <Artist {...props} name={name} />}/>
+      <Route path ='/venues/:id' component={(props)=> <Artist {...props} name={name} />}/>
+
       <Route component={NotFound} />
       </Switch>
       </Layout>
