@@ -21,12 +21,13 @@ class App extends Component {
   constructor() {
   super();
   this.state = {
-    artists: []
+    artists: [],
+    articles: [],
   }
 }
 // test change
 
-  componentDidMount(){
+  componentWillMount(){
     const artists = firebaseDB.collection('releases')
     const query = artists.where('artist','==','awxvhd0jCvMpBEjfTgQc')
     query.get()
@@ -38,7 +39,6 @@ class App extends Component {
           })
         })
       })
-
   }
 
   render() {
