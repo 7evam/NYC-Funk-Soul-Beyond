@@ -57,7 +57,7 @@ class App extends Component {
       <Route exact path='/shows' component={Shows}/>
       <Route exact path='/venues' component={Venues}/>
 
-      <Route path ='/artists/:id' component={(props)=> <Artist {...props} name={name} />}/>
+      <Route path ='/artists/:name' component={(props)=> <Artist {...props} name={name} />}/>
       <Route path ='/releases/:id' component={(props)=> <Artist {...props} name={name} />}/>
       <Route path ='/shows/:id' component={(props)=> <Artist {...props} name={name} />}/>
       <Route path ='/venues/:id' component={(props)=> <Artist {...props} name={name} />}/>

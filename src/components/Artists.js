@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Layout from './Layout'
 import Iframe from './Iframe'
 import {firebaseDB} from '../config/config.js'
+import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 class Artists extends Component {
 
@@ -31,7 +32,7 @@ class Artists extends Component {
                 {
             artists.map((artist, index) => (
             <div key={index}>
-              <h1>{artist.name}</h1>
+              <Link to={`/artists/${artist.name.replace(/ /g,"-")}`}><h1>{artist.name}</h1></Link>
               <img src ={artist.image} />
               <hr/>
             </div>

@@ -9,17 +9,20 @@ class Artist extends Component {
     }
   }
 
-    componentDidMount(){
-    const id = this.props.match.params.id
-    const artists = firebaseDB.collection('artists')
-    const query = artists.doc(id).get()
-      .then(artist => {
-          const data = artist.data()
-          this.setState({
-          artist: data
-        })
+componentWillMount(){
+const id = this.props.match.params.name
+const artists = firebaseDB.collection('artists')
+const query = artists.where('name', '=', id)
+query.get()
+.then(artists => {
+  artists.forEach(artist => {
+    const data = artist.data()
+      this.setState({
+        artist: data
+      })
     })
-  }
+  })
+}
 
 
   render() {
@@ -29,7 +32,8 @@ class Artist extends Component {
       <h1>one artist goes here</h1>
       <h1>one artist goes here</h1>
       <h1>one artist goes here</h1>
-      <p>{this.state.artist.name}</p>
+      <h1>{this.state.artist.name}</h1>
+
     </div>
       )
   }
