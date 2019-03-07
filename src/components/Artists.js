@@ -26,13 +26,14 @@ class Artists extends Component {
   }
   render() {
     const {artists} = this.state
+
     return(
     <div className="artists">
       <h1>artists go here 1st</h1>
                 {
             artists.map((artist, index) => (
             <div key={index}>
-              <Link to={`/artists/${artist.name.replace(/ /g,"-")}`}><h1>{artist.name}</h1></Link>
+              <Link to={`/artists/${artist.urlParam}`}><h1>{artist.name}</h1></Link>
               <img src ={artist.image} />
               <hr/>
             </div>

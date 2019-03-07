@@ -10,9 +10,9 @@ class Artist extends Component {
   }
 
 componentWillMount(){
-const id = this.props.match.params.name
+const urlParam = this.props.match.params.name
 const artists = firebaseDB.collection('artists')
-const query = artists.where('name', '=', id)
+const query = artists.where('urlParam', '==', urlParam)
 query.get()
 .then(artists => {
   artists.forEach(artist => {
