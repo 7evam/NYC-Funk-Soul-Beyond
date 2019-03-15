@@ -6,7 +6,7 @@ import logo from '../images/NYCFSBLogo.png'
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import './styles.css';
-import Articles from './articles.js'
+import Articles from './Articles.js'
 import OfficialPlaylist from './OfficialPlaylist.js'
 import {firebaseDB} from '../config/config.js'
 import Artists from './Artists.js'
@@ -19,6 +19,8 @@ import Venues from './Venues.js'
 import Releases from './Releases.js'
 import Shows from './Shows.js'
 
+// const storageFunc = require('@google-cloud/storage')
+
 class App extends Component {
 
   constructor() {
@@ -26,6 +28,7 @@ class App extends Component {
   this.state = {
     artists: [],
     articles: [],
+    images: {}
   }
 }
 // test change
@@ -42,6 +45,15 @@ class App extends Component {
           })
         })
       })
+
+    // const storage = firebaseDB.storageFunc().ref()
+
+    // const storageref = storage.child('./valipalaPreferredUnder3.jpg')
+    // const imagesRef = storageref.getDownloadURL()
+    // this.setState({
+    //   images: imagesRef
+    // })
+
   }
 
   render() {

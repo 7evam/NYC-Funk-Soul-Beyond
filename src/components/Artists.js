@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom'
 
 class Artists extends Component {
 
-    constructor() {
+constructor() {
   super();
   this.state = {
     artists: [],
