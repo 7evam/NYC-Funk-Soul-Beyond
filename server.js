@@ -1,6 +1,6 @@
-const express = require('express');
+const express        = require('express');
 const logger         = require('morgan');
-const app = express();
+const app            = express();
 const reactViews     = require('express-react-views');
 const path           = require('path');
 

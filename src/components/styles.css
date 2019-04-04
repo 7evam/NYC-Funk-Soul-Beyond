@@ -16,3 +16,14 @@ img{
   width:30%;
   height:100%;
 }
+
+.artist-image{
+  width: 50%;
+  height: auto;
+}
+
+.wrapper{
+  text-align: center;
+  margin-left: 50px;
+  margin-top: 70px;
+}
